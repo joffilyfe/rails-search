@@ -26,3 +26,7 @@ end
 gem 'slim-rails'
 gem 'simple_form'
 gem 'responders'
+
+# indexer search
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
