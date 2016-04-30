@@ -19,6 +19,5 @@ module Helpjuice
   class Application < Rails::Application
     config.time_zone = 'Brasilia'
     config.active_record.raise_in_transactional_callbacks = true
-    config.cache_store = :redis_store, "redis://192.168.99.100:6379/0/cache", { expires_in: 30.days }
   end
 end
