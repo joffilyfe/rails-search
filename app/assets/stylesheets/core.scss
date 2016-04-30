@@ -1,0 +1,26 @@
+$gradient-in: #457fca;
+$gradient-out: #5691c8;
+
+input.input-search {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  outline: 0;
+  width: 100%;
+}
+
+input.button-search {
+  background: #7cc142;
+  border-color: #7cc142;
+  padding: 10px 19px;
+  font-size: 19px;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.pg-header {
+  padding: 50px 0;
+  background: linear-gradient(to bottom, $gradient-in, $gradient-out);
+}

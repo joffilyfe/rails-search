@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+  title Helpjuice
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+
+  body
+    
+    nav class="navbar navbar-inverse"
+      div class="navbar-header"
+        a class="navbar-brand" href="/" Knowledge base
+    div class="col-md-12"
+        - flash.each do |name, msg|
+            = content_tag :div, msg, class: "alert alert-success #{name}"
+
+    div class="container"
+      == yield
