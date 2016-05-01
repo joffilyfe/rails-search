@@ -1,6 +1,8 @@
 .container
   .page-header
     h1 Statistics of Search
+  .col-md-4
+    = content_tag :canvas, nil, id: "chartSearch", :height => 250, data: {info: @searchs}
   .col-md-8
     table.table.table-striped
       th Search
@@ -9,3 +11,5 @@
         tr
           td = link_to search[0], admin_search_detail_path(search[0])
           td = search[1]
+
+= javascript_include_tag 'admin/chart'
