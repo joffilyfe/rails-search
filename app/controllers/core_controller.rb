@@ -4,7 +4,7 @@ class CoreController < ApplicationController
 
   def search
     question = Question.find_by(title: search_params[:query])
-    @question = QuestionPresenter.new(question)
+    @question = QuestionPresenter.new(question, search_params[:query])
     search = IndexerService.process(
       title: search_params[:query],
       client: "Admin",

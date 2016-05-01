@@ -1,0 +1,6 @@
+.container
+  .page-header
+    h1 Search results
+  ol
+    - Question.search(@question.search).records.each do |q|
+      li = q.title

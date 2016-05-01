@@ -41,6 +41,11 @@ input.button-search {
   text-align: center;
   display: block;
   margin: 0 auto;
+  &:hover {
+    color: #fff;
+    background: darken(#7cc142, 2);
+    border-color: darken(#7cc142, 2);
+  }
 }
 
 .pg-header {
