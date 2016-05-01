@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get '' => 'panel#index', as: 'panel'
+    get 'search/detail/:title' => 'panel#search_detail', as: 'search_detail'
   end
 end
