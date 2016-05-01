@@ -1,8 +1,31 @@
-$gradient-in: #457fca;
-$gradient-out: #5691c8;
+$navbar: #3f4752;
+$background: #51b9dc;
+
+// Comum
+nav {
+  &.navbar  {
+    margin-bottom: -1px;
+    border-radius: 0;
+  }
+  &.navbar-inverse {
+    background: $navbar;
+    border-color: $navbar;
+    .navbar-brand {
+      color: #fff;
+    }
+    a {
+      color: #fff;
+    }
+  }
+
+  &.navbar-transparent {
+    background: transparent;
+    border: 1px solid darken(#51b9dc, 10);
+  }
+}
 
 input.input-search {
-  border: 1px solid #ccc;
+  border: 1px solid darken(#51b9dc, 10);
   border-radius: 5px;
   padding: 15px;
   outline: 0;
@@ -21,6 +44,19 @@ input.button-search {
 }
 
 .pg-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
   padding: 50px 0;
-  background: linear-gradient(to bottom, $gradient-in, $gradient-out);
+  background-color: $background;
+  background-size: cover;
+  min-height: 500px;
+  height: 100vh;
+  margin-top: -50px;
+
+  h1 {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 30px;
+  }
 }

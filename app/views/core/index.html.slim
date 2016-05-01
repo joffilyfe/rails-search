@@ -1,9 +1,10 @@
-.pg-headerr
-  h1 Can we help you?
+.pg-header
+  .container
+    h1 Can we help you?
 
-  = simple_form_for :core, :url => {:action => :search}, :html => {:autocomplete => "off"} do |f|
-    .form-group.col-md-12
-      = f.input :query, input_html: { class: 'input-search' }, :placeholder => "Search", :label => false
-    .form-group.col-md-12
-      = f.button :submit, "Search", :class => "button-search"
-      
+    = simple_form_for :core, :url => {:action => :search}, :html => {:autocomplete => "off"} do |f|
+      .form-group.col-md-12
+        = f.input :query, input_html: { id: 'tags', class: 'input-search' }, :placeholder => "Search", :label => false
+      .form-group.col-md-12
+        = f.button :submit, "Search", :class => "button-search"
+        
