@@ -1,5 +1,5 @@
 class Admin::PanelController < ApplicationController
   def index
-    render :nothing => true
+    @searchs = Search.group(:title).order(count: :desc).count
   end
 end

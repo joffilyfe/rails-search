@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   post 'search/autocomplete' => 'core#elastic', as: 'autocomplete'
 
   namespace :admin do
-    get '' => 'panel#index', as: 'admin_panel'
+    get '' => 'panel#index', as: 'panel'
   end
 end

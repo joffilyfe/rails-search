@@ -5,6 +5,11 @@ class CoreController < ApplicationController
   def search
     question = Question.find_by(title: search_params[:query])
     @question = QuestionPresenter.new(question)
+    search = IndexerService.process(
+      title: search_params[:query],
+      client: "Admin",
+      address_ip: request.env['REMOTE_ADDR']
+    )
   end
 
   def elastic
