@@ -1,13 +1,14 @@
-.page-header
-  h1 Search detail
+.container
+  .page-header
+    h1 Search detail
 
-.col-md-8
-  table.table.table-striped
-    th Search
-    th IP
-    th Date
-    - @searchs.each do |search|
-      tr
-        td = search.title
-        td = search.address_ip
-        td = search.created_at.strftime("%d/%m/%Y at %H:%M")
+  .col-md-8
+    table.table.table-striped
+      th Search
+      th IP
+      th Date
+      - @searchs.each do |search|
+        tr
+          td = search.title
+          td = search.address_ip
+          td = search.created_at.strftime("%d/%m/%Y at %H:%M")
