@@ -21,11 +21,15 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'puma'
+end
 
 # our rocks gems
 gem 'slim-rails'
 gem 'simple_form'
 gem 'responders'
+gem 'faker'
 
 # indexer search
 gem 'elasticsearch-model'
